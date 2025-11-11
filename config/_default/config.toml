@@ -1,16 +1,16 @@
-baseURL = 'https://example.com'
+baseURL = 'https://paneva.art/'
 languageCode = ''
-title = 'Magnolia Default' # This can get overwritten by the single language files
+title = 'paneva.art' # This can get overwritten by the single language files
 defaultContentLanguage = 'en'
 # defaultContentLanguageInSubDir = true
 enableRobotsTXT = true
-theme = "Magnolia"
+theme = "Qna"
 googleAnalytics = ""
 
 # BLOG
 # Uncomment if you want to disable all posts and tags rendering and indexing
 # ignoreFiles= ['posts/*']
-disableKinds = ['taxonomy', 'term']
+# disableKinds = ['taxonomy', 'term']
 
 
 # Block AI crawlers to limit traffic

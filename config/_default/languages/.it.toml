@@ -1,4 +1,4 @@
-disabled = false
+disabled = true
 languageCode = 'it-IT'
 languageName = 'Italiano'
 title = 'Magnolia'
