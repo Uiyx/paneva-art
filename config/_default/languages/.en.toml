@@ -1,4 +1,4 @@
-disabled = false
+disabled = true
 languageCode = 'en-US'
 languageName = 'English'
 title = 'paneva.art 1' # This will go in the Header as well
@@ -144,7 +144,7 @@ Look at what this theme is capable to do on the features page, and see a beautif
   weight = 1
   [[menus.main]]
   name = "Art"
-  pageRef = "pages/art"
+  pageRef = "art"
   weight = 2
   [[menus.main]]
   name = "About me"

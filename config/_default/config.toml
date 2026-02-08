@@ -1,7 +1,7 @@
 baseURL = 'https://paneva.art/'
-languageCode = ''
+languageCode = 'bg'
 title = 'paneva.art' # This can get overwritten by the single language files
-defaultContentLanguage = 'en'
+defaultContentLanguage = 'bg'
 # defaultContentLanguageInSubDir = true
 enableRobotsTXT = true
 theme = "Qna"

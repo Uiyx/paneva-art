@@ -4,7 +4,7 @@ licenselink = "https://github.com/ololiuhqui/magnolia-free-hugo-theme/blob/main/
 description = "A simple, completely customizable, multilingual Hugo theme thought for professionals and small businesses."
 
 # The home page of the theme, where the source can be found.
-homepage = "https://github.com/uiyx/paneva"
+homepage = "https://github.com/uiyx/paneva-art"
 
 tags = ["personal", "company", "blog", "multilingual", "light", "Landing", "Bootstrap"]
 features = ["Responsive", "Modular", "Customizable", "SEO ready", "Google Analytics supported"]
