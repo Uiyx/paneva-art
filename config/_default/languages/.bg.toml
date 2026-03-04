@@ -2,7 +2,7 @@ disabled = false
 languageCode = 'bg-BG'
 languageName = 'Български'
 title = 'Яна Панева' # This will go in the Header as well
-copyright = """Designed with [Hugo](https://gohugo.io/) by [Ludovico Caluori](https://github.com/ololiuhqui) 🎨 \n
+copyright = """Site designed with [Hugo](https://gohugo.io/) based on the theme by [Ludovico Caluori](https://github.com/ololiuhqui)\n
  Licensed under [MIT license](https://github.com/ololiuhqui/magnolia-free-hugo-theme/blob/main/LICENSE.md) 📄""" # Please leave this here to give me and the tools i used some credit for the work, or BuyMeACoffee and change or remove the copyrightlink below :)
 contentDir = "content/bg"
 
@@ -18,13 +18,13 @@ contentDir = "content/bg"
     title = "За Мен"
     # You can use some markdown safely here as long as you don't include line breaks
     intro= """
-Казвам се Яна Панева и съм художник, роден и израснал в един от най-артистичните градове – Пловдив. Изкуството за мен никога не е било просто хоби, а начин да изразявам света около себе си.
+Казвам се **Яна Панева** и съм художник, роден и израснал в един от най-артистичните градове – Пловдив. Изкуството за мен никога не е било просто хоби, а начин да изразявам света около себе си.
 Пътят ми като професионален артист започна в Националната художествена гимназия „Цанко Лавренов“. Там преминах през школата на графиката и скулптурата, което обогати погледа ми за форма и обем, но голямата ми любов си остана живописта.
 През 2025 г. завърших със специалност „Изящни изкуства“, а в момента продължавам академичното си развитие в АМТИИ „Проф. Асен Диамандиев“ – Пловдив. Днес творбите ми са резултат от това непрекъснато търсене на хармония и цвят.“
         """
     mainButton = "Картини"
     mainButtonRef = "art" # Just write the name or slug of the page here
-    secondButton = "Contacts"
+    secondButton = "Свържи се с мен"
     secondButtonRef = "contacts" # Just write the name or slug of the page here
   # For the blog feed section (visible only if posts are rendered)
     blogTitle = "Моите картини"
@@ -39,17 +39,21 @@ contentDir = "content/bg"
 
 [params.contacts]
   title = "Свържете се с мен"
-  formCallToAction = "Попълнете полетата отдолу или изпратете e-mail"
+  # formCallToAction = "Попълнете полетата отдолу или изпратете e-mail"
+  description = """
+- **Телефон** | +359 876262856
+- **E-mail** | yanchetopaneva@gmail.com
+"""
   socialCallToAction = "Може също да ме потърсите на следните социални медии" # These are the same as in [params.social]
-  [params.contacts.form]
-    formspreeLink = "https://yourformspreelink.com" #subscribe to formspree and add the link for the form here
-    firstname = "Име*"
-    lastname = "Фамилия*"
-    email = "E-mail*"
-    phone = "Телефонен номер*"
-    Inquiry = "Запитване*"
-    checkbox = "Приемам, че моите данни могат да бъдат изполвани за обратна връзка*"
-    submitBtn = "Изпрати"
+  # [params.contacts.form]
+  #   formspreeLink = "https://yourformspreelink.com" #subscribe to formspree and add the link for the form here
+  #   firstname = "Име*"
+  #   lastname = "Фамилия*"
+  #   email = "E-mail*"
+  #   phone = "Телефонен номер*"
+  #   Inquiry = "Запитване*"
+  #   checkbox = "Приемам, че моите данни могат да бъдат изполвани за обратна връзка*"
+  #   submitBtn = "Изпрати"
  [params.biography]
    title = "Творческа Биография"
 description = """
@@ -137,16 +141,16 @@ description = """
     day7 = "Неделя: 9:00 - 19:00"
 
 [params.footer]
-  extraDescription1 = "Straight outta Scranton city"
-  extraDescription2 = "VAT No. 0000000000"
+  # extraDescription1 = "Straight outta Scranton city"
+  # extraDescription2 = "VAT No. 0000000000"
   [params.footer.navigate]
   heading = "Навигиране"
   [params.footer.contacts]
   enabled = true # enables/disables the whole contacts section in footer
   heading = "Свържи се"
   address = "с. Рогош, Пловдив, България"
-  # mail = "dundermifflin@fakemail.com"
-  # phone = "+00 0000000"
+  mail = "yanchetopaneva@gmail.com"
+  phone = "+359 876262856 "
 
 [params.notfound]
   title = "404, page not found" # text for 404 page

@@ -6,9 +6,9 @@
         <h2 class="mb-4 display-5 text-center">
           {{.Site.Params.biography.title}}
         </h2>
-        <p class="text-muted text-justify">
-        {{.Site.Params.biography.description | markdownify}}
-        </p>
+        <div class="text-muted">
+          {{.Site.Params.biography.description | markdownify}}
+        </div>
       </div>
     </div>
   </div>
