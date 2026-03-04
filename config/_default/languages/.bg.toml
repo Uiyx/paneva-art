@@ -1,0 +1,175 @@
+disabled = false
+languageCode = 'bg-BG'
+languageName = 'Български'
+title = 'Яна Панева' # This will go in the Header as well
+copyright = """Designed with [Hugo](https://gohugo.io/) by [Ludovico Caluori](https://github.com/ololiuhqui) 🎨 \n
+ Licensed under [MIT license](https://github.com/ololiuhqui/magnolia-free-hugo-theme/blob/main/LICENSE.md) 📄""" # Please leave this here to give me and the tools i used some credit for the work, or BuyMeACoffee and change or remove the copyrightlink below :)
+contentDir = "content/bg"
+
+# Change single params to "false" to remove from rendering
+[params]
+  subtitle = "лична галерия" # This goes in the header and in the site title
+  # PAGES
+  [params.homepage]
+    # Notice that SEO meta tags (what appears in google search results) can be set
+    # in individual pages frontmatters `/content/<page>`
+    ###
+    preTitle = ''
+    title = "За Мен"
+    # You can use some markdown safely here as long as you don't include line breaks
+    intro= """
+Казвам се Яна Панева и съм художник, роден и израснал в един от най-артистичните градове – Пловдив. Изкуството за мен никога не е било просто хоби, а начин да изразявам света около себе си.
+Пътят ми като професионален артист започна в Националната художествена гимназия „Цанко Лавренов“. Там преминах през школата на графиката и скулптурата, което обогати погледа ми за форма и обем, но голямата ми любов си остана живописта.
+През 2025 г. завърших със специалност „Изящни изкуства“, а в момента продължавам академичното си развитие в АМТИИ „Проф. Асен Диамандиев“ – Пловдив. Днес творбите ми са резултат от това непрекъснато търсене на хармония и цвят.“
+        """
+    mainButton = "Картини"
+    mainButtonRef = "art" # Just write the name or slug of the page here
+    secondButton = "Contacts"
+    secondButtonRef = "contacts" # Just write the name or slug of the page here
+  # For the blog feed section (visible only if posts are rendered)
+    blogTitle = "Моите картини"
+    blogButton= "Виж още мои картини"
+
+# [params.office]
+#   title = "Office"
+#  description = "This page can be easily customized by adding a google maps link to get directions towards your activity location."
+#  buttonText = "Get directions"
+#  buttonLink = "https://maps.app.goo.gl/LzsPzRkTYSZ8SF3y8" # google maps "share" link here (for button)
+#  mapLink = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d382266.44569392945!2d-76.55832397784323!3d41.53770983690751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c4d93a77484bbb%3A0xfff27920ab9bfae8!2sScranton%2C%20Pennsylvania%2C%20Stati%20Uniti!5e0!3m2!1sit!2sit!4v1716459350324!5m2!1sit!2sit" # google maps "embed" link here
+
+[params.contacts]
+  title = "Свържете се с мен"
+  formCallToAction = "Попълнете полетата отдолу или изпратете e-mail"
+  socialCallToAction = "Може също да ме потърсите на следните социални медии" # These are the same as in [params.social]
+  [params.contacts.form]
+    formspreeLink = "https://yourformspreelink.com" #subscribe to formspree and add the link for the form here
+    firstname = "Име*"
+    lastname = "Фамилия*"
+    email = "E-mail*"
+    phone = "Телефонен номер*"
+    Inquiry = "Запитване*"
+    checkbox = "Приемам, че моите данни могат да бъдат изполвани за обратна връзка*"
+    submitBtn = "Изпрати"
+ [params.biography]
+   title = "Творческа Биография"
+description = """
+## Награди и отличия
+
+- **2025** | Почетна значка на град Пловдив – за принос в издигането на духовния и културен облик на града и популяризирането на българската култура.
+- **2025** | Първа награда – Национален конкурс за стипендия на галерия „Ромфея", Пловдив.
+- **2025** | Трета награда – Национална изложба-конкурс с международно участие, Благоевград.
+- **2025** | Номинация за „Млад автор" – Годишна изложба на Дружество на пловдивските художници (ДПХ).
+- **2024** | Поощрителна награда – Конкурс за рисунка на името на арх. Георги Савов.
+- **2023** | Първа награда – Конкурс за рисунка на името на арх. Георги Савов.
+
+## Самостоятелни изложби
+
+- **2025** | Самостоятелна изложба – БНР Пловдив
+- **2024** | Самостоятелна изложба – Галерия „Крис", Асеновград
+- **2023** | Самостоятелна изложба – БНР Пловдив
+
+## Избрани участия и проекти
+
+- **2025** | Международно триенале „Духът на акварела" – ГХГ Варна
+- **2025** | Международен младежки фестивал на акварела – Пловдив
+- **2025** | „Emergence Art Fest" – Варна
+- **2025** | Годишна изложба на АМТИИ „Проф. Асен Диамандиев"
+- **2024** | Международен фестивал „Творците"
+- **2024** | Изложба „Музиката има цвят и цветовете звуци"
+- **2024** | Благотворителен търг на Камарата на строителите в Пловдив
+- **2023** | Благотворителен търг на „Gentlemen's Club Philippopolis"
+- **2023** | Участие в конкурс на галерия „Ромфея"
+"""
+
+ # [params.services]
+ #   title = ""
+ #   description = """ I built this theme with simplicity in mind, it is small and easily customizable, responsive, modular and multilingual. But it also leaves some space to further in-depth customization since it uses Bootstrap and SCSS.
+ #   This page also shows an example of how you can change the site`s page names: The site will use the `services.html` layout for this page, but the page will be called "Features" and the link will use the related permalink `/features`."""
+ #   [params.services.list]
+ #     # You can add as much params.services.list.<N> as you like
+ #     [params.services.list.0]
+ #       title= "Responsive"
+ #       description= "The theme is fully responsive and shows perfectly on every screen size."
+ #     [params.services.list.01]
+ #       title = "Modular"
+ #       description= "Hide and show some elements easily from the config file."
+ #     [params.services.list.02]
+ #       title = "Multilingual"
+ #       description= "The default content language is english (it can be changed), but you can add as many languages as you want very easily, the theme includes an italian language example and a dropdown menù for easily switching between languages. Permalinks can be localized in each language (eg. you can have `/contacts` for english and `/contatti` for italian)."
+ #     [params.services.list.03]
+ #       title = "Customizable"
+ #       description= "The page content can be customized from within the config files."
+ #     [params.services.list.04]
+ #       title = "SEO ready"
+ #       description= "Every page in /content has an easily customizable meta description and a unique meta title for better and easier indexing. The theme will use the image `static/img/meta-image` as meta image for Google, Meta and X."
+ #     [params.services.list.05]
+ #       title = "Google Analytics supported"
+ #       description= "Insert your Google Analytics tag in the `config.toml` file and be ready to track your site performances easily."
+ #     [params.services.list.06]
+ #       title = "Google Maps Included"
+ #       description= "The contact page can be easily customized by adding a google maps link to get directions towards your activity location."
+
+[params.socials]
+  enabled = true # enables/disables the whole social section in the footer
+  callToAction= "Свържете се с мен чрез социални медии >"
+      [[params.socials.link]]
+        name = "instagram"
+        link = "https://www.instagram.com/yana.paneva/"
+      [[params.socials.link]]
+        name = "facebook"
+        link = "https://www.facebook.com/yana.paneva.144"
+      # You can add other socials here by copypasting the above section and
+      # selecting the right name for the icon from here https://icons.getbootstrap.com/
+
+[params.schedules] # Time schedules (eg. your office openming hours)
+  enabledFooter = false # This will add the schedules on the footer too
+  enabledContacts = true # This will add the schedule to the contact page
+  title = "Подходящо време за връзка" # For contacts page only
+  [params.schedules.days]
+  # Use something like "Monday: 9-13" for each day
+  # if left empty it is disabled (default)
+    day1 = "Понеделник: 9:00 – 19:00"
+    day2 = "Вторник: 9:00 – 19:00"
+    day3 = "Сряда: 9:00 – 19:00"
+    day4 = "Четвъртък: 9:00 – 19:00"
+    day5 = "Петък: 9:00 – 19:00"
+    day6 = "Събота: 9:00 - 19:00"
+    day7 = "Неделя: 9:00 - 19:00"
+
+[params.footer]
+  extraDescription1 = "Straight outta Scranton city"
+  extraDescription2 = "VAT No. 0000000000"
+  [params.footer.navigate]
+  heading = "Навигиране"
+  [params.footer.contacts]
+  enabled = true # enables/disables the whole contacts section in footer
+  heading = "Свържи се"
+  address = "с. Рогош, Пловдив, България"
+  # mail = "dundermifflin@fakemail.com"
+  # phone = "+00 0000000"
+
+[params.notfound]
+  title = "404, page not found" # text for 404 page
+
+[params.single] # for posts pages (visible only if posts are rendered)
+  similarContent= "Подобни"
+  toc= "Съдържание"
+
+[menus]
+# PageRef should refer to the "translationKey" in `/content/<page>` frontmatter, names can be changed freely
+  [[menus.main]]
+  name = "Начална страница"
+  pageRef = "/"
+  weight = 1
+  [[menus.main]]
+  name = "Картини"
+  pageRef = "art"
+  weight = 2
+  [[menus.main]]
+  name = "Биография"
+  pageRef = "biography"
+  weight = 3
+  [[menus.main]]
+  name = "За Връзка"
+  pageRef = "contacts"
+  weight = 4
