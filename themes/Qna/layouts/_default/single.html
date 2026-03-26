@@ -3,7 +3,7 @@
   {{ with .Resources.GetMatch "images/featured*" }}
   <h1>{{ $.Title }}</h1>
   <img
-    class="rounded img-fluid shadow post-img mb-3"
+    class="rounded shadow post-img mb-3 full-width-img"
     src="{{ .RelPermalink }}"
     alt="{{ $.Title }} post featured image"
   />
