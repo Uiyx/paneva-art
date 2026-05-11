@@ -1,6 +1,6 @@
 ---
-title: 'Светлина в долината акварел 35 50 цена50'
-slug: 'svetlina-v-dolinata-akvarel-35-50-tsena50'
+title: 'Светлина в долината'
+slug: 'svetlina-v-dolinata'
 tags: ['Aкварел']
 summary: 
 description: # This is what will be displayed as meta description (the theme will automatically grab it from summary if left empty)
@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-Светлина в долината акварел 35 50 цена50
+Светлина в долината, акварел, 35 на 50, цена 50 евро
 ```

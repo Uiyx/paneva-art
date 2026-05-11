@@ -1,6 +1,6 @@
 ---
-title: '„Силуетът на хълма“ акварел 35на50 120евро'
-slug: 'siluetat-na-halma-akvarel-35na50-120evro'
+title: '„Силуетът на хълма“'
+slug: 'siluetat-na-halma'
 tags: ['Aкварел']
 summary: 
 description: # This is what will be displayed as meta description (the theme will automatically grab it from summary if left empty)
@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-„Силуетът на хълма“ акварел 35на50 120евро
+„Силуетът на хълма“, акварел, 35 на 50, 120 евро
 ```

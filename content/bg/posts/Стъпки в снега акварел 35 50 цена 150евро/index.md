@@ -1,6 +1,6 @@
 ---
-title: 'Стъпки в снега акварел 35 50 цена 150евро'
-slug: 'stapki-v-snega-akvarel-35-50-tsena-150evro'
+title: '"Стъпки в снега"'
+slug: 'stapki-v-snega'
 tags: ['Aкварел']
 summary: 
 description: # This is what will be displayed as meta description (the theme will automatically grab it from summary if left empty)
@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-Стъпки в снега акварел 35 50 цена 150евро
+"Стъпки в снега", акварел, 35 на 50, цена 150 евро
 ```

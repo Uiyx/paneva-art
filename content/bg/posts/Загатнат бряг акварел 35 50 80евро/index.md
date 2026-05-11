@@ -1,6 +1,6 @@
 ---
-title: 'Загатнат бряг акварел 35 50 80евро'
-slug: 'zagatnat-bryag-akvarel-35-50-80evro'
+title: 'Загатнат бряг'
+slug: 'zagatnat-bryag'
 tags: ['Aкварел']
 summary: 
 description: # This is what will be displayed as meta description (the theme will automatically grab it from summary if left empty)
@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-Загатнат бряг акварел 35 50 80евро
+Загатнат бряг, акварел, 35 на 50, цена 80 евро
 ```

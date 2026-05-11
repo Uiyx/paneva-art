@@ -1,6 +1,6 @@
 ---
-title: '„Синият час“ акварел 35на50 100евро'
-slug: 'siniyat-chas-akvarel-35na50-100evro'
+title: '„Синият час“'
+slug: 'siniyat-chas'
 tags: ['Aкварел']
 summary: 
 description: # This is what will be displayed as meta description (the theme will automatically grab it from summary if left empty)
@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-„Синият час“ акварел 35на50 100евро
+„Синият час“, акварел, 35 на 50, цена 100 евро
 ```

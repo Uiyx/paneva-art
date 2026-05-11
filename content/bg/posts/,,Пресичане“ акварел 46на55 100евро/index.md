@@ -1,6 +1,6 @@
 ---
-title: ',,Пресичане“ акварел 46на55 100евро'
-slug: 'presichane-akvarel-46na55-100evro'
+title: ',,Пресичане“'
+slug: 'presichane'
 tags: ['Aкварел']
 summary: 
 description: # This is what will be displayed as meta description (the theme will automatically grab it from summary if left empty)
@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-,,Пресичане“ акварел 46на55 100евро
+,,Пресичане“, акварел, 46 на 55, цена 100 евро
 ```
