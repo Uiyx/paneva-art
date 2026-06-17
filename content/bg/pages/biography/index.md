@@ -1,0 +1,9 @@
+---
+title: 'Биография'
+url: '/biography'
+description: 'За мен и моите постижения'
+translationKey: biography
+draft: false
+layout: 'biography'
+type: 'pages'
+---
