@@ -1,5 +1,5 @@
 ---
-title: 'Планинско дихание акварел размер'
+title: '„Планинско дихание“'
 slug: 'planinsko-dihanie'
 tags: ['Aкварел']
 summary: 
@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-Планинско дихание, акварел, 35 на 50, цена 80 евро
+„Планинско дихание“, акварел, 35 на 50, цена 80 евро
 ```

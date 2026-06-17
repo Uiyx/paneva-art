@@ -1,5 +1,5 @@
 ---
-title: 'сповен от сън'
+title: '„Сповен от сън“'
 slug: 'spoven-ot-san'
 tags: ['Aкварел']
 summary: 
@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-Сповен от сън, акварел, 35 на 50, цена 70 евро
+„Сповен от сън“, акварел, 35 на 50, цена 70 евро
 ```

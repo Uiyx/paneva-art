@@ -1,5 +1,5 @@
 ---
-title: 'Загатнат бряг'
+title: '„Загатнат бряг“'
 slug: 'zagatnat-bryag'
 tags: ['Aкварел']
 summary: 
@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-Загатнат бряг, акварел, 35 на 50, цена 80 евро
+„Загатнат бряг“, акварел, 35 на 50, цена 80 евро
 ```

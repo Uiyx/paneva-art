@@ -1,5 +1,5 @@
 ---
-title: '"Светлина в тишината акварел"'
+title: '„Светлина в тишината“'
 slug: 'svetlina-v-tishinata'
 tags: ['Aкварел']
 summary: 
@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-Светлина в тишината, акварел 50 на 70, цена 120 евро
+„Светлина в тишината“, акварел, 50 на 70, цена 120 евро
 ```

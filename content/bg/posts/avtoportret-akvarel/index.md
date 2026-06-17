@@ -1,10 +1,9 @@
 ---
-title: 'Автопортрет - Акварел'
+title: '„Автопортрет“'
 slug: 'avtoportret-akvarel'
 tags: ['автопортрет', 'акварел']
 summary: 
 description: # This is what will be displayed as meta description (the theme will automatically grab it from summary if left empty)
-date: '2026-01-03T10:49:18+02:00'
 expiryDate: ''
 translationKey:
 draft: false
@@ -14,5 +13,5 @@ layout: 'single'
 ---
 
 ```
-Акварел
+„Автопортрет“, акварел, неналичен
 ```
