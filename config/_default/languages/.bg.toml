@@ -148,7 +148,7 @@ description = """
   [params.footer.contacts]
   enabled = true # enables/disables the whole contacts section in footer
   heading = "Свържи се"
-  address = "с. Рогош, Пловдив, България"
+  address = "Пловдив, България"
   mail = "yanchetopaneva@gmail.com"
   phone = "+359 876262856 "
 
