@@ -13,4 +13,63 @@
     </div>
   </div>
 </section>
+
+{{ $images := sort (.Resources.Match "*.{jpg,png}") ".Name" "asc" }}
+{{ if ge (len $images) 1 }}
+<section class="pb-5 pb-xl-8">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+        <h3 class="mb-4 text-center">Галерия</h3>
+        <div id="biographyCarousel" class="carousel slide" data-bs-ride="carousel">
+          {{ $total := len $images }}
+          <!-- Indicators -->
+          <div class="carousel-indicators">
+            {{ range $i, $img := $images }}
+            <button type="button" data-bs-target="#biographyCarousel" data-bs-slide-to="{{ $i }}" {{ if eq $i 0 }}class="active" aria-current="true"{{ end }} aria-label="Slide {{ add $i 1 }}"></button>
+            {{ end }}
+          </div>
+
+          <!-- Slides -->
+          <div class="carousel-inner rounded shadow">
+            {{ range $i, $img := $images }}
+            <div class="carousel-item{{ if eq $i 0 }} active{{ end }}">
+              {{ $caption := $img.Name }}
+              {{ $caption = replace $caption ".jpg" "" }}
+              {{ $caption = replace $caption ".png" "" }}
+              {{ $caption = replace $caption "(2)" "" }}
+              {{ $caption = replace $caption "(3)" "" }}
+              {{ $caption = replace $caption "  " " " }}
+              {{ $caption = trim $caption " ." }}
+              <img
+                src="{{ $img.RelPermalink }}"
+                class="d-block w-100"
+                style="max-height: 70vh; object-fit: contain; background-color: #f0ebe4;"
+                alt="{{ $caption }}"
+              />
+              {{ if $caption }}
+              <div class="carousel-caption d-none d-md-block" style="background: rgba(0,0,0,0.5); border-radius: 8px; padding: 8px 16px;">
+                <p class="mb-0" style="font-size: 0.9rem;">{{ $caption }}</p>
+              </div>
+              {{ end }}
+            </div>
+            {{ end }}
+          </div>
+
+          <!-- Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#biographyCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#biographyCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
 {{ end }}
