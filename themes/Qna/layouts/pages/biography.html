@@ -72,4 +72,26 @@
 </section>
 {{ end }}
 
+{{ if ge (len $images) 1 }}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const carousel = document.getElementById('biographyCarousel');
+  if (!carousel) return;
+  const bsCarousel = new bootstrap.Carousel(carousel, {
+    interval: 3000,
+    pause: 'hover'
+  });
+
+  const items = carousel.querySelectorAll('.carousel-item');
+  items.forEach((item, index) => {
+    item.style.cursor = 'pointer';
+    item.addEventListener('click', () => {
+      bsCarousel.to(index);
+      bsCarousel.pause();
+    });
+  });
+});
+</script>
+{{ end }}
+
 {{ end }}
