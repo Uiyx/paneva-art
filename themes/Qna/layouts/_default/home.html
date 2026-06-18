@@ -57,7 +57,7 @@
 <h2 class="text-center my-4">{{$.Site.Params.homepage.blogTitle}}</h2>
 
 <!--  -->
-<div class="row g-3 mb-3">
+<div class="masonry-grid mb-3">
   {{range first 4 .Pages}} {{- partial "post-card.html" . -}} {{end}}
 </div>
 <div class="d-flex justify-content-center">
