@@ -1,7 +1,7 @@
 ---
-title: '„Сповен от сън“'
-slug: 'spoven-ot-san'
-tags: ['Aкварел']
+title: '„Пурпурни нюанси“'
+slug: 'purpurni-nyuansi'
+tags: ['Масло']
 summary: 
 description: # This is what will be displayed as meta description (the theme will automatically grab it from summary if left empty)
 expiryDate: ''
@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-„Сповен от сън“, акварел, 35 на 50, цена 70 евро
+„Пурпурни нюанси“, масло, цена 60 евро
 ```
