@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-„Тихи брегове“, масло, 45 на 50, цена 180 евро
+„Тихи брегове“, 45x50, цена 180 евро
 ```

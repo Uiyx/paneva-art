@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-„Буря над равнината“, акварел, 35 на 50, цена 45 евро
+„Буря над равнината“, 35x50, цена 45 евро
 ```

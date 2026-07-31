@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-„Браздите на времето“, туш, неналичен
+„Браздите на времето“, неналичен
 ```

@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-„Лято край водата“, акрил, цена 50 евро
+„Лято край водата“, цена 50 евро
 ```

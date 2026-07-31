@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-„Градски пулс“, акварел, 45 на 55, цена 120 евро
+„Градски пулс“, 45x55, цена 120 евро
 ```

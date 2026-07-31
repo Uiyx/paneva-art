@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-„По пътя към илюзиите“, туш, неналичен
+„По пътя към илюзиите“, неналичен
 ```

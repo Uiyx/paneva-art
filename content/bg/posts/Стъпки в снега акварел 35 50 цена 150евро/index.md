@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-„Стъпки в снега“, акварел, 35 на 50, цена 150 евро
+„Стъпки в снега“, 35x50, цена 150 евро
 ```

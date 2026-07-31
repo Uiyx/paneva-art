@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-„Стъпки в мъглата“, акварел, цена 35 евро
+„Стъпки в мъглата“, цена 35 евро
 ```
