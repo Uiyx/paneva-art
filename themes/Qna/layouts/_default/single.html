@@ -77,7 +77,7 @@
   <hr />
   <h4 class="text-center my-4">{{ .Site.Params.single.similarcontent }}</h4>
 
-  <div class="row g-3 mb-3">
+  <div class="masonry-grid mb-3">
     {{ $pagesToRender:= slice }} {{ range .GetTerms "tags" }} {{ range first 4
     .Pages }} {{ $pageToAppend := . }}
     <!-- check whether the page is already in pagestorender  -->
