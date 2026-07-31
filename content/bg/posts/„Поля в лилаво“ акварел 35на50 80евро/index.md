@@ -1,7 +1,7 @@
 ---
 title: '„Поля в лилаво“'
 slug: 'polya-v-lilavo'
-tags: ['Aкварел']
+tags: ['Акварел']
 summary: 
 description: # This is what will be displayed as meta description (the theme will automatically grab it from summary if left empty)
 expiryDate: ''

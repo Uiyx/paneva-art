@@ -1,7 +1,7 @@
 ---
 title: '„Стъпки в снега“'
 slug: 'stapki-v-snega'
-tags: ['Aкварел']
+tags: ['Акварел']
 summary: 
 description: # This is what will be displayed as meta description (the theme will automatically grab it from summary if left empty)
 expiryDate: ''
