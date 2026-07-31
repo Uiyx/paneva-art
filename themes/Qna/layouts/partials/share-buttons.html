@@ -1,110 +1,56 @@
-{{/* Share buttons: copy link, Facebook, Messenger, Instagram (+ native share on mobile).
-     Expects the current page context (uses .Permalink and .Title). */}}
-{{ $url := .Permalink }}
+{{/* --------------------------------------------------------------
+   Share buttons: copy link, Facebook
+   – показваме различно съдържание за мобилни и десктоп устройства, като запазваме оригиналната стилистика.
+   -------------------------------------------------------------- */}}
+{{ $url   := .Permalink }}   {{/* текуща страница */}}
 {{ $title := .Title }}
-<div class="share-buttons mt-4" data-share-url="{{ $url }}" data-share-title="{{ $title }}">
-  <span class="share-label text-muted">Сподели:</span>
 
-  <button type="button" class="share-btn share-copy" aria-label="Копирай линка">
-    <i class="bi bi-link-45deg" aria-hidden="true"></i><span>Копирай линк</span>
-  </button>
+<div class="share-buttons">
 
-  <button type="button" class="share-btn share-facebook" aria-label="Сподели във Facebook">
-    <i class="bi bi-facebook" aria-hidden="true"></i><span>Facebook</span>
-  </button>
+  {{/* Мобилно – един обобщен бутон „Сподели“ (Web Share API) */}}
+  <div class="d-block d-lg-none">
+    <button class="share-btn" onclick="shareNative()">
+      <span class="share-label">Сподели</span>
+    </button>
+  </div>
 
-  <button type="button" class="share-btn share-messenger" aria-label="Сподели в Messenger">
-    <i class="bi bi-messenger" aria-hidden="true"></i><span>Messenger</span>
-  </button>
+  {{/* Десктоп – Facebook + копирай линк */}}
+  <div class="d-none d-lg-flex align-items-center gap-2">
+    <button class="share-btn" onclick="copyLink()">
+      <span class="share-label">Копирай линк</span>
+    </button>
 
-  <button type="button" class="share-btn share-instagram" aria-label="Сподели в Instagram">
-    <i class="bi bi-instagram" aria-hidden="true"></i><span>Instagram</span>
-  </button>
-
-  <button type="button" class="share-btn share-native" aria-label="Сподели чрез устройството" hidden>
-    <i class="bi bi-share" aria-hidden="true"></i><span>Сподели</span>
-  </button>
-
-  <span class="share-status" role="status" aria-live="polite"></span>
+    <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u={{ $url | urlquery }}&t={{ $title | urlquery }}" target="_blank" rel="noopener">
+      <i class="fab fa-facebook-f"></i>
+      <span class="share-label">Facebook</span>
+    </a>
+  </div>
 </div>
 
 <script>
-(function () {
-  var container = document.querySelector('.share-buttons');
-  if (!container) return;
-
-  var url = container.getAttribute('data-share-url');
-  var title = container.getAttribute('data-share-title');
-  var status = container.querySelector('.share-status');
-  var statusTimer = null;
-
-  function showStatus(text) {
-    status.textContent = text;
-    status.classList.add('share-status--visible');
-    clearTimeout(statusTimer);
-    statusTimer = setTimeout(function () {
-      status.classList.remove('share-status--visible');
-    }, 2500);
+/* Mobile native share (Web Share API) */
+function shareNative() {
+  if (navigator.share) {
+    navigator.share({
+      title: "{{ $title }}",
+      url:   "{{ $url }}"
+    }).catch(() => {});
+  } else {
+    // fallback – копирай линк
+    copyLink();
   }
+}
 
-  function copyLink(done) {
-    function fallback() {
-      var input = document.createElement('input');
-      input.value = url;
-      input.setAttribute('readonly', '');
-      input.style.position = 'absolute';
-      input.style.left = '-9999px';
-      document.body.appendChild(input);
-      input.select();
-      input.setSelectionRange(0, input.value.length);
-      var ok = false;
-      try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
-      document.body.removeChild(input);
-      done(ok);
-    }
-    if (navigator.clipboard && window.isSecureContext) {
-      navigator.clipboard.writeText(url).then(function () { done(true); }, fallback);
-    } else {
-      fallback();
-    }
-  }
-
-  var canNativeShare = typeof navigator.share === 'function';
-  var nativeBtn = container.querySelector('.share-native');
-  if (canNativeShare) {
-    nativeBtn.hidden = false;
-    nativeBtn.addEventListener('click', function () {
-      navigator.share({ title: title, url: url }).catch(function () { /* user cancelled */ });
-    });
-  }
-
-  container.querySelector('.share-copy').addEventListener('click', function () {
-    copyLink(function (ok) {
-      showStatus(ok ? 'Линкът е копиран!' : 'Копирайте линка от адресната лента');
-    });
-  });
-
-  container.querySelector('.share-facebook').addEventListener('click', function () {
-    var shareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url);
-    window.open(shareUrl, 'facebook-share', 'width=600,height=540,menubar=no,toolbar=no');
-  });
-
-  container.querySelector('.share-messenger').addEventListener('click', function () {
-    if (canNativeShare) {
-      // On mobile the native share sheet offers Messenger directly.
-      navigator.share({ title: title, url: url }).catch(function () { /* user cancelled */ });
-    } else {
-      copyLink(function (ok) {
-        showStatus(ok ? 'Линкът е копиран — поставете го в Messenger' : 'Копирайте линка от адресната лента');
-      });
-    }
-  });
-
-  container.querySelector('.share-instagram').addEventListener('click', function () {
-    // Instagram has no web share endpoint; copy the link for pasting in a story or DM.
-    copyLink(function (ok) {
-      showStatus(ok ? 'Линкът е копиран — поставете го в Instagram' : 'Копирайте линка от адресната лента');
-    });
-  });
-})();
+/* Desktop copy‑link fallback */
+function copyLink() {
+  navigator.clipboard.writeText("{{ $url }}")
+    .then(() => {
+      const status = document.createElement('div');
+      status.className = 'share-status share-status--visible';
+      status.textContent = 'Линкът е копиран!';
+      document.body.appendChild(status);
+      setTimeout(() => status.remove(), 2000);
+    })
+    .catch(() => alert('Неуспешно копиране.'));
+}
 </script>
