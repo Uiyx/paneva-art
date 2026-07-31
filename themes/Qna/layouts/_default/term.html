@@ -1,8 +1,7 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
 <hr />
-<div class="row g-3 mb-3">
-  {{range .Pages}} {{- partial "post-card.html" . -}} {{end}}
+<div class="masonry-grid mb-3">
+  {{ range .Pages }} {{- partial "post-card.html" . -}} {{ end }}
 </div>
-
-{{end}}
+{{ end }}

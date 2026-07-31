@@ -1,12 +1,19 @@
 {{ define "main" }}
+{{ if eq .Kind "term" }}
+<h1>{{ .Title }}</h1>
+<hr />
+<div class="masonry-grid mb-3">
+  {{ range .Pages }} {{- partial "post-card.html" . -}} {{ end }}
+</div>
+{{ else }}
 <h1>{{ .Title }}</h1>
 <hr />
 <div class="mb-3 g-3 col">
-  {{range .Pages}}
+  {{ range .Pages }}
   <a href="{{ .RelPermalink }}" class="btn btn-sm btn-light border-primary m-2"
     >#{{ .Title }}</a
   >
-  {{end}}
+  {{ end }}
 </div>
-
-{{end}}
+{{ end }}
+{{ end }}
