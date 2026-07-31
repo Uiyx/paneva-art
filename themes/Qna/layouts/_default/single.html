@@ -1,4 +1,16 @@
 {{ define "main" }}
+{{- $desc := .Summary | plainify -}}
+{{- $price := "" -}}
+{{- with findRE "цена\\s*[0-9]+\\s*евро" $desc 1 -}}
+  {{- $price = index . 0 | replaceRE "^цена\\s*" "" -}}
+{{- end -}}
+{{- $status := "" -}}
+{{- with findRE "(продадена|неналичен)" $desc 1 -}}
+  {{- $status = index . 0 -}}
+{{- end -}}
+{{- $content := .Content -}}
+{{- $content = replaceRE ",\\s*цена\\s*[0-9]+\\s*евро" "" $content -}}
+{{- $content = replaceRE ",\\s*(продадена|неналичен)" "" $content -}}
 <div class="container">
   {{ with .Resources.GetMatch "images/featured*" }}
   <h1>{{ $.Title }}</h1>
@@ -38,7 +50,15 @@
   <hr />
   <!-- Content -->
   <div class="row g-3 gx-lg-5">
-    <div class="col order-lg-first">{{ with .Content }}{{ . }}{{ end }}</div>
+    <div class="col order-lg-first">
+      {{ with $content }}{{ . | safeHTML }}{{ end }}
+      {{ if or $price $status }}
+      <div class="mt-3">
+        {{ if $price }}<span class="art-price">{{ $price }}</span>{{ end }}
+        {{ if $status }}<span class="art-price art-price--muted">{{ $status | title }}</span>{{ end }}
+      </div>
+      {{ end }}
+    </div>
     <!-- Table Of Contents -->
     <div class="order-first order-lg-last col-12 col-lg-4">
       {{ if in .TableOfContents "li" }}

@@ -22,3 +22,25 @@
     columns: 1;
   }
 }
+
+/* Art price & status badges — separated from the description */
+.art-price {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  border-radius: 2rem;
+  background-color: tint-color($primary, 82%);
+  color: shade-color($primary, 45%);
+  font-family: JosefinSans;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+
+.art-price--muted {
+  background-color: $secondary;
+  color: tint-color($body-color, 35%);
+  border: 1px solid $border-color;
+  font-weight: 400;
+}
+

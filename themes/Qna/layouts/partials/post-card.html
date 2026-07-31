@@ -79,6 +79,18 @@
 <!-- </div> -->
 
 
+{{- $desc := .Summary | plainify -}}
+{{- $price := "" -}}
+{{- with findRE "цена\\s*[0-9]+\\s*евро" $desc 1 -}}
+  {{- $price = index . 0 | replaceRE "^цена\\s*" "" -}}
+{{- end -}}
+{{- $status := "" -}}
+{{- with findRE "(продадена|неналичен)" $desc 1 -}}
+  {{- $status = index . 0 -}}
+{{- end -}}
+{{- $desc = replaceRE ",\\s*цена\\s*[0-9]+\\s*евро" "" $desc -}}
+{{- $desc = replaceRE ",\\s*(продадена|неналичен)" "" $desc -}}
+{{- $desc = trim $desc " ," -}}
 <div class="masonry-item">
   <div class="card p-0 bg-secondary shadow-sm border-none">
     {{ with .Resources.GetMatch "images/featured*" }}
@@ -100,7 +112,13 @@
         {{end}}
         {{end}}
       </div>
-      <div class="card-text d-none d-lg-block">{{.Summary | plainify}}</div>
+      <div class="card-text d-none d-lg-block">{{ $desc }}</div>
+      {{ if or $price $status }}
+      <div class="mt-2">
+        {{ if $price }}<span class="art-price">{{ $price }}</span>{{ end }}
+        {{ if $status }}<span class="art-price art-price--muted">{{ $status | title }}</span>{{ end }}
+      </div>
+      {{ end }}
       <div>
         <small class="">{{.ReadingTime}} minutes read</small>
         <br>
