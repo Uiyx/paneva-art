@@ -58,6 +58,7 @@
         {{ if $status }}<span class="art-price art-price--muted">{{ $status | title }}</span>{{ end }}
       </div>
       {{ end }}
+      {{ partial "share-buttons.html" . }}
     </div>
     <!-- Table Of Contents -->
     <div class="order-first order-lg-last col-12 col-lg-4">

@@ -51,3 +51,74 @@
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
+/* Share buttons on single post pages */
+/* Same shape and metrics as .art-price / the theme's .btn */
+.share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.share-label {
+  font-family: JosefinSans;
+  font-size: 1rem;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--bs-border-radius);
+  background-color: $secondary;
+  color: $body-color;
+  border: 1px solid $border-color;
+  font-family: JosefinSans;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+
+  .bi {
+    font-size: 1.1rem;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $primary;
+    color: $body-color;
+  }
+}
+
+.share-status {
+  font-family: JosefinSans;
+  font-size: 0.9rem;
+  color: tint-color($body-color, 25%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.share-status--visible {
+  opacity: 1;
+}
+
+@include media-breakpoint-down(sm) {
+  .share-buttons {
+    gap: 0.4rem;
+  }
+
+  .share-btn {
+    flex: 1 1 calc(50% - 0.4rem);
+    justify-content: center;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .share-status {
+    flex-basis: 100%;
+  }
+}
