@@ -1,6 +1,6 @@
 User-agent: *
-{{ range .Site.Languages }}
-Disallow: /{{ . }}/404
+{{ range hugo.Sites }}
+Disallow: /{{ .Language.Lang }}/404
 {{end}}
 Sitemap: {{$.Site.BaseURL}}/sitemap.xml
 

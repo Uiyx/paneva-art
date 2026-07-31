@@ -1,5 +1,5 @@
 baseURL = 'https://paneva.art/'
-languageCode = 'bg'
+locale = 'bg'
 title = 'paneva.art' # This can get overwritten by the single language files
 defaultContentLanguage = 'bg'
 # defaultContentLanguageInSubDir = true
