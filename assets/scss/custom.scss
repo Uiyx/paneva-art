@@ -44,3 +44,10 @@
   font-weight: 400;
 }
 
+
+
+/* Make description wrap on single post page */
+.col.order-lg-first pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
