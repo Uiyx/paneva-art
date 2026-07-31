@@ -78,13 +78,18 @@
   <h4 class="text-center my-4">{{ .Site.Params.single.similarcontent }}</h4>
 
   <div class="masonry-grid mb-3">
-    {{ $pagesToRender:= slice }} {{ range .GetTerms "tags" }} {{ range first 4
-    .Pages }} {{ $pageToAppend := . }}
-    <!-- check whether the page is already in pagestorender  -->
-    {{ if in $pagesToRender $pageToAppend | not }} {{ if eq $pageToAppend $.Page
-    | not }} {{ $pagesToRender = $pagesToRender | append $pageToAppend }} {{ end
-    }} {{ end }} {{ end }} {{ end }} {{ range $pagesToRender }} {{ partial
-    "post-card" . }} {{ end }}
+    {{ $pagesToRender := slice }}
+    {{ range .GetTerms "tags" }}
+      {{ range first 5 .Pages }}
+        {{ $pageToAppend := . }}
+        {{ if and (ne $pageToAppend $.Page) (not (in $pagesToRender $pageToAppend)) }}
+          {{ $pagesToRender = $pagesToRender | append $pageToAppend }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ range first 4 $pagesToRender }}
+      {{ partial "post-card" . }}
+    {{ end }}
   </div>
   {{ end }}
 </div>
