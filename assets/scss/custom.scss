@@ -116,13 +116,25 @@
 
 @include media-breakpoint-down(sm) {
   .share-buttons {
-    gap: 0.4rem;
+    gap: 0.35rem;
   }
 
+  /* Mobile: compact icon-only buttons (text labels hidden) */
   .share-btn {
-    flex: 1 1 calc(50% - 0.4rem);
+    flex: 0 0 auto;
+    width: 2.1rem;
+    height: 2.1rem;
+    padding: 0;
     justify-content: center;
-    padding: 0.5rem 0.5rem;
+    gap: 0;
+
+    > span {
+      display: none;
+    }
+
+    .bi {
+      font-size: 0.95rem;
+    }
   }
 
   .share-status {
