@@ -146,6 +146,11 @@ p {
   max-width: 240px;
   overflow: hidden;
   text-overflow: ellipsis;
+  /* Underline starts at the text, not under the padding/divider */
+  &::after {
+    left: 0.75rem;
+    width: calc(100% - 0.75rem);
+  }
   @include media-breakpoint-down(lg) {
     max-width: 40vw;
   }
