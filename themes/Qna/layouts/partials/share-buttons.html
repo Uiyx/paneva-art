@@ -22,63 +22,81 @@
 
 <script>
 (function () {
-  var container = document.querySelector('.share-buttons');
-  if (!container) return;
+  /* Bind ALL .share-buttons containers (the partial is used inside loops,
+     e.g. post-card.html in masonry grids, plus once on single pages). */
+  if (window.__shareButtonsInit) return;
 
-  var url = container.getAttribute('data-share-url');
-  var title = container.getAttribute('data-share-title');
-  var status = container.querySelector('.share-status');
-  var statusTimer = null;
+  function init() {
+    if (window.__shareButtonsInit) return;
+    window.__shareButtonsInit = true;
 
-  function showStatus(text) {
-    status.textContent = text;
-    status.classList.add('share-status--visible');
-    clearTimeout(statusTimer);
-    statusTimer = setTimeout(function () {
-      status.classList.remove('share-status--visible');
-    }, 2500);
-  }
+    var containers = document.querySelectorAll('.share-buttons');
+    if (!containers.length) return;
 
-  function copyLink(done) {
-    function fallback() {
-      var input = document.createElement('input');
-      input.value = url;
-      input.setAttribute('readonly', '');
-      input.style.position = 'absolute';
-      input.style.left = '-9999px';
-      document.body.appendChild(input);
-      input.select();
-      input.setSelectionRange(0, input.value.length);
-      var ok = false;
-      try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
-      document.body.removeChild(input);
-      done(ok);
-    }
-    if (navigator.clipboard && window.isSecureContext) {
-      navigator.clipboard.writeText(url).then(function () { done(true); }, fallback);
-    } else {
-      fallback();
-    }
-  }
+    containers.forEach(function (container) {
+      var url = container.getAttribute('data-share-url');
+      var title = container.getAttribute('data-share-title');
+      var status = container.querySelector('.share-status');
+      var statusTimer = null;
 
-  var canNativeShare = typeof navigator.share === 'function';
-  var nativeBtn = container.querySelector('.share-native');
-  if (canNativeShare) {
-    nativeBtn.hidden = false;
-    nativeBtn.addEventListener('click', function () {
-      navigator.share({ title: title, url: url }).catch(function () { /* user cancelled */ });
+      function showStatus(text) {
+        status.textContent = text;
+        status.classList.add('share-status--visible');
+        clearTimeout(statusTimer);
+        statusTimer = setTimeout(function () {
+          status.classList.remove('share-status--visible');
+        }, 2500);
+      }
+
+      function copyLink(done) {
+        function fallback() {
+          var input = document.createElement('input');
+          input.value = url;
+          input.setAttribute('readonly', '');
+          input.style.position = 'absolute';
+          input.style.left = '-9999px';
+          document.body.appendChild(input);
+          input.select();
+          input.setSelectionRange(0, input.value.length);
+          var ok = false;
+          try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+          document.body.removeChild(input);
+          done(ok);
+        }
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(url).then(function () { done(true); }, fallback);
+        } else {
+          fallback();
+        }
+      }
+
+      var canNativeShare = typeof navigator.share === 'function';
+      var nativeBtn = container.querySelector('.share-native');
+      if (canNativeShare) {
+        nativeBtn.hidden = false;
+        nativeBtn.addEventListener('click', function () {
+          navigator.share({ title: title, url: url }).catch(function () { /* user cancelled */ });
+        });
+      }
+
+      container.querySelector('.share-copy').addEventListener('click', function () {
+        copyLink(function (ok) {
+          showStatus(ok ? 'Линкът е копиран!' : 'Копирайте линка от адресната лента');
+        });
+      });
+
+      container.querySelector('.share-facebook').addEventListener('click', function () {
+        var shareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url);
+        window.open(shareUrl, 'facebook-share', 'width=600,height=540,menubar=no,toolbar=no');
+      });
     });
   }
 
-  container.querySelector('.share-copy').addEventListener('click', function () {
-    copyLink(function (ok) {
-      showStatus(ok ? 'Линкът е копиран!' : 'Копирайте линка от адресната лента');
-    });
-  });
-
-  container.querySelector('.share-facebook').addEventListener('click', function () {
-    var shareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url);
-    window.open(shareUrl, 'facebook-share', 'width=600,height=540,menubar=no,toolbar=no');
-  });
+  /* Defer until the whole DOM is in place so every card's buttons exist. */
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();
 </script>
