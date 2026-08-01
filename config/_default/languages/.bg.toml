@@ -2,8 +2,9 @@ disabled = false
 locale = 'bg-BG'
 label = 'Български'
 title = 'Яна Панева' # This will go in the Header as well
-copyright = """Site designed with [Hugo](https://gohugo.io/) based on the theme by [Ludovico Caluori](https://github.com/ololiuhqui)\n
- Licensed under [MIT license](https://github.com/ololiuhqui/magnolia-free-hugo-theme/blob/main/LICENSE.md) 📄""" # Please leave this here to give me and the tools i used some credit for the work, or BuyMeACoffee and change or remove the copyrightlink below :)
+copyright = """Artwork and content © 2025–present Yana Paneva
+
+[Copyright and licensing details](https://github.com/Uiyx/paneva-art/blob/main/LICENSE.md)""" # Please leave this here to give me and the tools i used some credit for the work, or BuyMeACoffee and change or remove the copyrightlink below :)
 contentDir = "content/bg"
 
 # Change single params to "false" to remove from rendering

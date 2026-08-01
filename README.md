@@ -1,30 +1,14 @@
-# This is the branch containing an example site for the [Magnolia Hugo Theme](https://github.com/ololiuhqui/magnolia-free-hugo-theme/tree/main)
+## Licensing
 
-The site structure is shown below:
+The website’s source code, templates, styles, scripts, configuration, and other
+non-artistic software are available under the MIT License.
 
-```
-├── assets
-│   └── scss
-│       ├── custom.scss
-│       ├── custom-variables.scss
-│       └── main.scss
-├── config
-│   └── _default
-│       ├── config.toml
-│       └── languages
-├── content
-│   ├── en
-│   │   ├── _index.md
-│   │   ├── pages
-│   │   ├── posts
-│   │   ├── profile.webp
-│   │   └── tags
-│   └── it
-│       ├── _index.md
-│       ├── pages
-│       ├── posts
-│       ├── profile.webp
-│       └── tags
-└── themes
-    └── Magnolia
-```
+The site is based on the Magnolia Hugo theme by Ludovico Caluori and includes
+substantial modifications and additional development by Kristian Daskalov.
+
+The paintings, artwork images, photographs, written content, logos, branding,
+and other artistic or editorial materials belonging to Yana Paneva are not
+open source and are not licensed under the MIT License. All rights to those
+materials are reserved.
+
+See [LICENSE.md](LICENSE.md) for the complete terms.
