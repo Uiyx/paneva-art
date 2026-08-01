@@ -120,6 +120,11 @@
     gap: 0.35rem;
   }
 
+  /* Mobile: hide label and show only icon buttons */
+  .share-label {
+    display: none;
+  }
+
   /* Mobile: compact icon-only buttons (text labels hidden) */
   .share-btn {
     flex: 0 0 auto;
