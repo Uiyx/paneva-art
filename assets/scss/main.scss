@@ -268,26 +268,18 @@ footer {
 
 /* SINGLE POST */
 .post-img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
   display: block;
   margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  width: auto;
   object-fit: contain;
-  box-sizing: border-box;
-  /* Mobile: remove any height limit */
-  @include media-breakpoint-down(lg) {
-    max-height: none;
-  }
 }
 
-/* keep a sensible max-height on large screens */
-@include media-breakpoint-up(lg) {
-  .toc {
-    top: 120px;
-  }
+/* Desktop: limit height to avoid overflow */
+@media (min-width: 992px) {
   .post-img {
-    max-height: 80vh; /* keep a reasonable limit on large screens */
+    max-height: 70vh; /* adjust as needed */
   }
 }
 /* END SINGLE POST */
