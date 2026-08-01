@@ -27,19 +27,6 @@
   @return mix(black, $color, $weight);
 }
 
-/* REDEFINE REQUIRED VARIABLES */
-
-// /* body color and background */
-// $body-bg: #e8d6cb;
-// $body-color: #0f1108;
-//
-// /* palette */
-// $primary: #73003c;
-// $secondary: #e0dedc;
-// $dark: $body-color;
-// $light: $body-bg;
-// $input-bg: tint-color($light, 15%);
-
 // Warm Cream + Pink
 $body-bg: #fdf6ee;
 $body-color: #1a1a18;
@@ -48,16 +35,8 @@ $secondary: #f0ebe4;
 $dark: $body-color;
 $light: $body-bg;
 $input-bg: tint-color($light, 15%);
-
-// Ivory + Dusty Rose
-// $body-bg: #fffff0;
-// $body-color: #111111;
-// $primary: #b5707f;
-// $secondary: #f5f5e8;
-// $dark: $body-color;
-// $light: $body-bg;
-// $input-bg: tint-color($light, 15%);
-
+$mid-color: #e0afb4;
+$light-mid-color: #efd3d1;
 
 /* others */
 $input-focus-border-color: $body-color;
