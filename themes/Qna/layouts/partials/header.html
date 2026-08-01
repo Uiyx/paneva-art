@@ -44,7 +44,7 @@
             <a class="nav-link nav-menu text-nowrap{{ if $isActive }} active{{ end }}" href="{{ .URL }}"{{ if $isActive }} aria-current="page"{{ end }}>{{ .Name }}</a>
           </li>
           {{- end }}
-          <li class="vr ms-1 d-none d-lg-block"></li>
+          <li class="ms-1 d-none d-lg-block"></li>
           {{ if hugo.IsMultilingual}}
           {{if .IsTranslated}}
           <li class="nav-item dropdown">
