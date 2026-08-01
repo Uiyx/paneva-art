@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-„Светлина в долината“, 35x50, цена 50 евро
+„Светлина в долината“, 35x50 cm, цена 50 евро
 ```

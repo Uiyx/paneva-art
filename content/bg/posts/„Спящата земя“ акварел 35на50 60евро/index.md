@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-„Спящата земя“, 35x50, цена 60 евро
+„Спящата земя“, 35x50 cm, цена 60 евро
 ```

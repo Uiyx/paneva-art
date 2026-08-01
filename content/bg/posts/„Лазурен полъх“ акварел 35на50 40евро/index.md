@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-„Лазурен полъх“, 35x50, цена 40 евро
+„Лазурен полъх“, 35x50 cm, цена 40 евро
 ```

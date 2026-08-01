@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-„Музикални частици“, 35x50, цена 120 евро
+„Музикални частици“, 35x50 cm, цена 120 евро
 ```

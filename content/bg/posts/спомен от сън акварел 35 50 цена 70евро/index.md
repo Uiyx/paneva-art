@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-„Спомен от сън“, 35x50, цена 70 евро
+„Спомен от сън“, 35x50 cm, цена 70 евро
 ```

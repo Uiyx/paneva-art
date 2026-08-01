@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-„Ефимерност“, 35x50, цена 40 евро
+„Ефимерност“, 35x50 cm, цена 40 евро
 ```

@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-„Загатнат бряг“, 35x50, цена 80 евро
+„Загатнат бряг“, 35x50 cm, цена 80 евро
 ```

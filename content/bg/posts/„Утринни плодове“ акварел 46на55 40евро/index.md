@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-„Утринни плодове“, 46x55, цена 40 евро
+„Утринни плодове“, 46x55 cm, цена 40 евро
 ```
