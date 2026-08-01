@@ -91,9 +91,15 @@
 
   &:hover,
   &:focus {
-    background-color: $primary;
+    background-color: $mid-color;
     color: $body-color;
   }
+}
+
+/* Tags — hover background turns $mid-color, same as share buttons */
+.post-tag {
+  --bs-btn-hover-bg: #{$mid-color};
+  --bs-btn-active-bg: #{$mid-color};
 }
 
 .share-status {
