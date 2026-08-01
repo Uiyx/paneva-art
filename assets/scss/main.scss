@@ -138,6 +138,17 @@ p {
   }
 }
 
+/* Brand group (site title + current-page label) — must be shrinkable so the
+   navbar stays on a single line on mobile instead of wrapping the toggler. */
+.navbar-brand-group {
+  min-width: 0;
+  @include media-breakpoint-down(lg) {
+    /* Base width 0: the group absorbs free space (label truncates) instead of
+       overflowing the container and pushing the toggler onto its own line. */
+    flex: 1 1 0;
+  }
+}
+
 /* Current-page label (posts, tags, …) shown next to the site title */
 .nav-current {
   margin-left: 0.5rem;
@@ -153,6 +164,9 @@ p {
   }
   @include media-breakpoint-down(lg) {
     max-width: 40vw;
+    /* Keep at least a few characters visible on very narrow screens instead of
+       collapsing to a bare divider line. */
+    min-width: 2rem;
   }
 }
 
