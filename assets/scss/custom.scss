@@ -65,6 +65,7 @@
 .share-label {
   font-family: JosefinSans;
   font-size: 1rem;
+  margin-right: 0.5rem;
 }
 
 .share-btn {
@@ -110,19 +111,12 @@
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
-
 .share-status--visible {
   opacity: 1;
 }
-
 @include media-breakpoint-down(sm) {
   .share-buttons {
     gap: 0.35rem;
-  }
-
-  /* Mobile: hide label and show only icon buttons */
-  .share-label {
-    display: none;
   }
 
   /* Mobile: compact icon-only buttons (text labels hidden) */
