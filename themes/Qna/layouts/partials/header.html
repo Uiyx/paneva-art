@@ -26,11 +26,21 @@
         <ul
           class="navbar-nav align-items-center ms-auto mb-2 mb-lg-0 fw-bolder"
         >
+          {{- $currentPage := . }}
+          {{- $currentInMenu := false }}
           {{- range .Site.Menus.main }}
+            {{- $isActive := or (eq $currentPage.RelPermalink .URL) ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+            {{- if $isActive }}{{ $currentInMenu = true }}{{ end }}
           <li class="nav-item">
-            <a class="nav-link nav-menu text-nowrap" href="{{ .URL }}">{{.Name}}</a>
+            <a class="nav-link nav-menu text-nowrap{{ if $isActive }} active{{ end }}" href="{{ .URL }}"{{ if $isActive }} aria-current="page"{{ end }}>{{ .Name }}</a>
           </li>
-          {{ end }}
+          {{- end }}
+          {{- if not $currentInMenu }}
+          <li class="vr ms-1 me-1 d-none d-lg-block"></li>
+          <li class="nav-item">
+            <span class="nav-link nav-menu nav-current active text-nowrap" aria-current="page">{{ .Title }}</span>
+          </li>
+          {{- end }}
           <li class="vr ms-1 d-none d-lg-block"></li>
           {{ if hugo.IsMultilingual}}
           {{if .IsTranslated}}

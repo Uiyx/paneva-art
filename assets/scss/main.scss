@@ -130,6 +130,22 @@ p {
       transform-origin: left;
       transform: scaleX(1);
     }
+    &.active {
+      color: $body-color;
+      &::after {
+        transform-origin: left;
+        transform: scaleX(1);
+      }
+    }
+  }
+  .nav-current {
+    max-width: 240px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include media-breakpoint-down(lg) {
+      max-width: 100%;
+      white-space: normal;
+    }
   }
   .nav-trad {
     position: relative;
