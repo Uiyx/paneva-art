@@ -87,6 +87,7 @@
 
   .bi {
     font-size: 1.1rem;
+    line-height: 0;
   }
 
   &:hover,
@@ -135,6 +136,7 @@
     .bi {
       font-size: 0.95rem;
       margin: auto;
+      line-height: 0;
     }
   }
 
