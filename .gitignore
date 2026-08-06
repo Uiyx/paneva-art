@@ -1,4 +1,4 @@
 .hugo_build.lock
 resources/
 public/
-.prettierrc
+.prettierrcnode_modules/
