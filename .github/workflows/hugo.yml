@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: recursive  # needed if your theme is a submodule
+          # submodules: recursive  # needed if your theme is a submodule
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
