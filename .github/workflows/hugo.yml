@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
+        # with:
           # submodules: recursive  # needed if your theme is a submodule
 
       - name: Setup Hugo
