@@ -1,7 +1,7 @@
 ---
 title: '„Нежност“'
 slug: 'neznost'
-tags: ['Акрил']
+tags: ['Акрил', 'Цветя']
 summary: "„Нежност“, акрил, размер 20x50 см., цена 60 евро"
 description: # This is what will be displayed as meta description (the theme will automatically grab it from summary if left empty)
 expiryDate: ''

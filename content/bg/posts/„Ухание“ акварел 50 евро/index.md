@@ -1,8 +1,8 @@
 ---
 title: '„Ухание“'
 slug: 'uhanie'
-tags: ['Акварел']
-summary: 
+tags: ['Акварел', 'Цветя']
+summary: "„Ухание“, акварел, цена 50 евро"
 description: # This is what will be displayed as meta description (the theme will automatically grab it from summary if left empty)
 expiryDate: ''
 translationKey:
@@ -11,5 +11,5 @@ type: # This is here for future possible development, you can leave it blank
 layout: 'single'
 ---
 ```
-„Ухание“, цена 50 евро
+„Ухание“, акварел, цена 50 евро
 ```

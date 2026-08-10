@@ -1,8 +1,8 @@
 ---
 title: '„Разцвет“'
 slug: 'raztsvet'
-tags: ['Акрил']
-summary: 
+tags: ['Акрил', 'Цветя']
+summary: "„Разцвет“, 45x50 cm, цена 60 евро"
 description: # This is what will be displayed as meta description (the theme will automatically grab it from summary if left empty)
 expiryDate: ''
 translationKey:
