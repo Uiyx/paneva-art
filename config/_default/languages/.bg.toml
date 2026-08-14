@@ -120,7 +120,7 @@ description = """
   callToAction= "Свържете се с мен чрез социални медии >"
       [[params.socials.link]]
         name = "instagram"
-        link = "https://www.instagram.com/yana.paneva/"
+        link = "https://www.instagram.com/paneva.art/"
       [[params.socials.link]]
         name = "facebook"
         link = "https://www.facebook.com/yana.paneva.144"
