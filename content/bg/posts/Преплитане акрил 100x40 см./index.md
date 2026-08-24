@@ -1,7 +1,7 @@
 ---
 title: '„Преплитане“'
 slug: 'preplitane'
-tags: ['Акрил']
+tags: ['Акрил', 'Цветя']
 summary: 
 description: # This is what will be displayed as meta description (the theme will automatically grab it from summary if left empty)
 expiryDate: ''
@@ -12,5 +12,7 @@ layout: 'single'
 ---
 
 ```
-„Преплитане“, акрил, 100 × 40 см., цена: 80 евро
+„Преплитане“, акрил, 100 × 40 см.
 ```
+
+**Цена: 80 евро**
